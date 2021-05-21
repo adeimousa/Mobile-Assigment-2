@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import edu.birzeit.mobileassigment2.R;
 
-public class MainActivity extends AppCompatActivity {
+public class StudentActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_student);
     }
 }
