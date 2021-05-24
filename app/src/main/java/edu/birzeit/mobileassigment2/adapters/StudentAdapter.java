@@ -1,4 +1,4 @@
-package edu.birzeit.mobileassigment2.activities;
+package edu.birzeit.mobileassigment2.adapters;
 
 import android.content.Context;
 import android.content.Intent;
