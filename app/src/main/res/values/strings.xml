@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Mobile Assigment 2</string>
+    <string name="certificate_txt">View Certificate:</string>
+    <string name="certificateId_txt">ID</string>
+    <string name="txt_in">in</string>
+    <string name="txt_to">to</string>
+    <string name="txt_teacherName">Teacher:</string>
+    <string name="txt_organization">Organization:</string>
+    <string name="txt_description">Description:</string>
+    <string name="btn_back">Back</string>
+    <string name="btn_edit">Edit</string>
+    <string name="txt_editCertificate">Edit Certificate</string>
+    <string name="txt_fromDate">since</string>
+    <string name="txt_certificateType">Certificate Type:</string>
+    <string name="txt_teacher">Teacher</string>
+    <string name="hint_organization">Organization...</string>
+    <string name="hint_description">description...</string>
+    <string name="btn_update_txt">Update</string>
 </resources>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.certificate.EditCertificateActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        style="@style/header_layout_style_1"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/text_style_1"
+            android:layout_width="208dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/txt_editCertificate"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/txt_certificateId_edit"
+            style="@style/text_style_1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/certificateId_txt"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <LinearLayout
+                style="@style/linearLayoutHorizontal_style_1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView7"
+                    style="@style/txt_style_4"
+                    android:layout_width="286dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/txt_certificateType" />
+
+                <Spinner
+                    android:id="@+id/spn_certificateType"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linearLayoutHorizontal_style_1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView8"
+                    style="@style/txt_style_4"
+                    android:layout_width="7dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/txt_teacher" />
+
+                <TextView
+                    android:id="@+id/txt_teacherName_edit"
+                    style="@style/text_style_2"
+                    android:layout_width="108dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="TextView" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linearLayoutHorizontal_style_1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView9"
+                    style="@style/txt_style_4"
+                    android:layout_width="52dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/txt_organization" />
+
+                <EditText
+                    android:id="@+id/edt_organization"
+                    android:layout_width="147dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="@string/hint_organization"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/blue_ex" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linearLayoutHorizontal_style_1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView10"
+                    style="@style/txt_style_4"
+                    android:layout_width="286dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/txt_description" />
+
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/edtTxtMultiLine_description_edit"
+                android:layout_width="match_parent"
+                android:layout_height="161dp"
+                android:layout_weight="0"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/hint_description"
+                android:inputType="textMultiLine"
+                android:textColor="@color/blue_ex" />
+
+            <LinearLayout style="@style/txt_LinerLayout_line"></LinearLayout>
+
+            <TextView
+                android:id="@+id/textView4"
+                style="@style/txt_style_4"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="0"
+                android:gravity="center"
+                android:text="@string/txt_fromDate" />
+
+            <DatePicker
+                android:id="@+id/datePicker_since"
+                android:layout_width="match_parent"
+                android:layout_height="145dp"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                android:spinnersShown="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                app:layout_constraintVertical_bias="0.101" />
+
+            <TextView
+                android:id="@+id/textView6"
+                style="@style/txt_style_4"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_weight="0"
+                android:gravity="center"
+                android:text="@string/txt_to" />
+
+            <DatePicker
+                android:id="@+id/datePicker_to"
+                android:layout_width="match_parent"
+                android:layout_height="145dp"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                android:spinnersShown="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                app:layout_constraintVertical_bias="0.101" />
+
+            <LinearLayout style="@style/txt_LinerLayout_line"></LinearLayout>
+
+            <Button
+                android:id="@+id/button3"
+                style="@style/btn_style_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="btn_update_onClick"
+                android:text="@string/btn_update_txt"
+                app:backgroundTint="@color/blue_ex"
+                app:cornerRadius="10dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

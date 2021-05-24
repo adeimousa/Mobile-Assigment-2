@@ -3,104 +3,104 @@ package edu.birzeit.mobileassigment2.models;
 import java.util.Date;
 
 public class Certificate {
-    private int certificateId;
-    private int teacherId;
-    private int fieldId;
-    private int certificateTypeId;
-    private String organizationName;
-    private String description;
-    private Date fromDate;
-    private Date toDate;
+    private int CERTIFICATE_ID ;
+    private int TEACHER_ID ;
+    private int FIELD_ID ;
+    private int CERTIFICATE_TYPE_ID ;
+    private String ORGANIZATION_NAME;
+    private String DESCRIPTION;
+    private Date FROM_DATE;
+    private Date TO_DATE;
 
     public Certificate() {
     }
 
-    public Certificate(int certificateId, int teacherId, int fieldId, int certificateTypeId, String organizationName, String description, Date fromDate, Date toDate) {
-        this.certificateId = certificateId;
-        this.teacherId = teacherId;
-        this.fieldId = fieldId;
-        this.certificateTypeId = certificateTypeId;
-        this.organizationName = organizationName;
-        this.description = description;
-        this.fromDate = fromDate;
-        this.toDate = toDate;
-    }
-
-    public int getCertificateId() {
-        return certificateId;
-    }
-
-    public void setCertificateId(int certificateId) {
-        this.certificateId = certificateId;
-    }
-
-    public int getTeacherId() {
-        return teacherId;
-    }
-
-    public void setTeacherId(int teacherId) {
-        this.teacherId = teacherId;
-    }
-
-    public int getFieldId() {
-        return fieldId;
-    }
-
-    public void setFieldId(int fieldId) {
-        this.fieldId = fieldId;
-    }
-
-    public int getCertificateTypeId() {
-        return certificateTypeId;
-    }
-
-    public void setCertificateTypeId(int certificateTypeId) {
-        this.certificateTypeId = certificateTypeId;
-    }
-
-    public String getOrganizationName() {
-        return organizationName;
-    }
-
-    public void setOrganizationName(String organizationName) {
-        this.organizationName = organizationName;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public Date getFromDate() {
-        return fromDate;
-    }
-
-    public void setFromDate(Date fromDate) {
-        this.fromDate = fromDate;
-    }
-
-    public Date getToDate() {
-        return toDate;
-    }
-
-    public void setToDate(Date toDate) {
-        this.toDate = toDate;
+    public Certificate(int CERTIFICATE_ID, int TEACHER_ID, int FIELD_ID, int CERTIFICATE_TYPE_ID, String ORGANIZATION_NAME, String DESCRIPTION, Date FROM_DATE, Date TO_DATE) {
+        this.CERTIFICATE_ID = CERTIFICATE_ID;
+        this.TEACHER_ID = TEACHER_ID;
+        this.FIELD_ID = FIELD_ID;
+        this.CERTIFICATE_TYPE_ID = CERTIFICATE_TYPE_ID;
+        this.ORGANIZATION_NAME = ORGANIZATION_NAME;
+        this.DESCRIPTION = DESCRIPTION;
+        this.FROM_DATE = FROM_DATE;
+        this.TO_DATE = TO_DATE;
     }
 
     @Override
     public String toString() {
         return "Certificate{" +
-                "certificateId=" + certificateId +
-                ", teacherId=" + teacherId +
-                ", fieldId=" + fieldId +
-                ", certificateTypeId=" + certificateTypeId +
-                ", organizationName='" + organizationName + '\'' +
-                ", description='" + description + '\'' +
-                ", fromDate=" + fromDate +
-                ", toDate=" + toDate +
+                "CERTIFICATE_ID=" + CERTIFICATE_ID +
+                ", TEACHER_ID=" + TEACHER_ID +
+                ", FIELD_ID=" + FIELD_ID +
+                ", CERTIFICATE_TYPE_ID=" + CERTIFICATE_TYPE_ID +
+                ", ORGANIZATION_NAME='" + ORGANIZATION_NAME + '\'' +
+                ", DESCRIPTION='" + DESCRIPTION + '\'' +
+                ", FROM_DATE=" + FROM_DATE +
+                ", TO_DATE=" + TO_DATE +
                 '}';
+    }
+
+    public int getCERTIFICATE_ID() {
+        return CERTIFICATE_ID;
+    }
+
+    public void setCERTIFICATE_ID(int CERTIFICATE_ID) {
+        this.CERTIFICATE_ID = CERTIFICATE_ID;
+    }
+
+    public int getTEACHER_ID() {
+        return TEACHER_ID;
+    }
+
+    public void setTEACHER_ID(int TEACHER_ID) {
+        this.TEACHER_ID = TEACHER_ID;
+    }
+
+    public int getFIELD_ID() {
+        return FIELD_ID;
+    }
+
+    public void setFIELD_ID(int FIELD_ID) {
+        this.FIELD_ID = FIELD_ID;
+    }
+
+    public int getCERTIFICATE_TYPE_ID() {
+        return CERTIFICATE_TYPE_ID;
+    }
+
+    public void setCERTIFICATE_TYPE_ID(int CERTIFICATE_TYPE_ID) {
+        this.CERTIFICATE_TYPE_ID = CERTIFICATE_TYPE_ID;
+    }
+
+    public String getORGANIZATION_NAME() {
+        return ORGANIZATION_NAME;
+    }
+
+    public void setORGANIZATION_NAME(String ORGANIZATION_NAME) {
+        this.ORGANIZATION_NAME = ORGANIZATION_NAME;
+    }
+
+    public String getDESCRIPTION() {
+        return DESCRIPTION;
+    }
+
+    public void setDESCRIPTION(String DESCRIPTION) {
+        this.DESCRIPTION = DESCRIPTION;
+    }
+
+    public Date getFROM_DATE() {
+        return FROM_DATE;
+    }
+
+    public void setFROM_DATE(Date FROM_DATE) {
+        this.FROM_DATE = FROM_DATE;
+    }
+
+    public Date getTO_DATE() {
+        return TO_DATE;
+    }
+
+    public void setTO_DATE(Date TO_DATE) {
+        this.TO_DATE = TO_DATE;
     }
 }

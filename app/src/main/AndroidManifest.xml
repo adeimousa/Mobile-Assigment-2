@@ -15,9 +15,13 @@
         <activity android:name=".activities.classes.AddClassActivity" />
         <activity android:name=".activities.student.EditStudentActivity" />
         <activity android:name=".activities.student.AddStudentActivity" />
-        <activity android:name=".activities.CertificateActivity" />
+        <activity android:name=".activities.certificate.EditCertificateActivity"></activity>
+        <activity android:name=".activities.certificate.ViewCertificateActivity" />
+        <activity android:name=".activities.certificate.CertificatesActivity" />
         <activity android:name=".activities.classes.ClassActivity" />
-        <activity android:name=".activities.TeacherActivity" />
+        <activity android:name=".activities.teacher.EditTeacherActivity"></activity>
+        <activity android:name=".activities.teacher.AddTeacherActivity" />
+        <activity android:name=".activities.teacher.TeacherActivity" />
         <activity android:name=".activities.student.StudentActivity" />
         <activity android:name=".activities.MainActivity">
             <intent-filter>
