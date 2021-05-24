@@ -47,7 +47,7 @@ public class CertificateAdapter extends BaseAdapter {
         ImageView icon = (ImageView) view.findViewById(R.id.icon);
 
         orgName.setText(certificates[i].getORGANIZATION_NAME());
-//        icon.setImageResource(R.drawable.ic_action_name);
+        icon.setImageResource(R.drawable.ic_gpa_reult);
         return view;
     }
 

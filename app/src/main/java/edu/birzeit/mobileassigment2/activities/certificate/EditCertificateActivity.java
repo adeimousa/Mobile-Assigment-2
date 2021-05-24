@@ -22,17 +22,25 @@ import com.google.gson.Gson;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
+import java.net.URLEncoder;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 
 import edu.birzeit.mobileassigment2.R;
+import edu.birzeit.mobileassigment2.activities.student.EditStudentActivity;
+import edu.birzeit.mobileassigment2.activities.student.StudentActivity;
 import edu.birzeit.mobileassigment2.models.Certificate;
 import edu.birzeit.mobileassigment2.models.CertificateType;
+import edu.birzeit.mobileassigment2.models.Class;
 import edu.birzeit.mobileassigment2.models.Field;
 import edu.birzeit.mobileassigment2.models.Teacher;
+
+import static edu.birzeit.mobileassigment2.HttpConnection.putRequest;
 
 public class EditCertificateActivity extends AppCompatActivity {
 
@@ -267,11 +275,63 @@ public class EditCertificateActivity extends AppCompatActivity {
             txt_teacherName_edit.setText(teacherName);
         }
     }
+    private class SendPutRequest extends AsyncTask<String, Void, String> {
+        @Override
+        protected String doInBackground(String... urls) {
+            try {
+                int certificateTypeId = -1;
+                for (CertificateType certificateType : certificateTypes) {
+                    if (certificateType.getCERTIFICATION_TYPE_NAME().equals(spn_certificateType.getSelectedItem().toString())){
+                        certificateTypeId = certificateType.getCERTICATION_TYPE_ID();
+                        break;
+                    }
+                }
+                String data = URLEncoder.encode("teacherId", "UTF-8")
+                        + "=" + URLEncoder.encode(certificate.getTEACHER_ID()+"", "UTF-8");
+                data += "&" + URLEncoder.encode("id", "UTF-8") + "="
+                        + URLEncoder.encode(certificate.getCERTIFICATE_ID()+"", "UTF-8");
+                data += "&" + URLEncoder.encode("fieldId", "UTF-8") + "="
+                        + URLEncoder.encode("1", "UTF-8");
+                data += "&" + URLEncoder.encode("certificateTypeId", "UTF-8") + "="
+                        + URLEncoder.encode(certificateTypeId+"", "UTF-8");
+                data += "&" + URLEncoder.encode("organizationName", "UTF-8") + "="
+                        + URLEncoder.encode(edt_organization.getText().toString(), "UTF-8");
 
+                data += "&" + URLEncoder.encode("description", "UTF-8") + "="
+                        + URLEncoder.encode(edtTxtMultiLine_description_edit.getText().toString(), "UTF-8");
+                data += "&" + URLEncoder.encode("fromDate", "UTF-8") + "="
+                        + URLEncoder.encode("2021-5-24", "UTF-8");
+                data += "&" + URLEncoder.encode("toDate", "UTF-8") + "="
+                        + URLEncoder.encode("2021-5-24", "UTF-8");
+                return putRequest(urls[0],data);
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
+            return "";
+        }
+        @Override
+        protected void onPostExecute(String result) {
+            Intent intent = new Intent(getApplicationContext(), ViewCertificateActivity.class);
+            startActivity(intent);
+//            Toast.makeText(SecondActivity.this, result, Toast.LENGTH_SHORT).show();
+        }
+    }
 
     public void btn_update_onClick(View view) {
-        Intent intent = new Intent(this, ViewCertificateActivity.class);
+        String restUrl = "http://10.0.2.2:80/school-project/certificate.php";
+        if (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.INTERNET)
+                != PackageManager.PERMISSION_GRANTED) {
 
-        startActivity(intent);
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.INTERNET},
+                    123);
+
+        }
+        else{
+            SendPutRequest runner = new SendPutRequest();
+            runner.execute(restUrl);
+        }
+
     }
 }
