@@ -192,4 +192,18 @@
         android:layout_marginLeft="39dp"
         android:layout_marginTop="10dp" />
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="103dp"
+        android:layout_height="186dp"
+        android:layout_below="@+id/datePicker"
+        android:layout_marginStart="34dp"
+        android:layout_marginLeft="34dp"
+        android:layout_marginTop="55dp"
+        android:layout_toEndOf="@+id/editTextNationalNumber"
+        android:layout_toRightOf="@+id/editTextNationalNumber"
+        android:text="Save"
+        android:textSize="18sp"
+        app:backgroundTint="@color/student_blue1" />
+
 </RelativeLayout>

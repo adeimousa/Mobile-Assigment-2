@@ -193,4 +193,17 @@
         android:layout_marginLeft="39dp"
         android:layout_marginTop="10dp" />
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:layout_below="@+id/datePicker"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="53dp"
+        android:layout_toEndOf="@+id/editTextNationalNumber"
+        android:layout_toRightOf="@+id/editTextNationalNumber"
+        android:onClick="addStudent"
+        android:text="Add" />
+
 </RelativeLayout>
