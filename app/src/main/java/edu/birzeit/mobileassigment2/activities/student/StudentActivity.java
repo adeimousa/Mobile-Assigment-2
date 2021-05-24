@@ -32,6 +32,9 @@ import edu.birzeit.mobileassigment2.activities.StudentAdapter;
 import edu.birzeit.mobileassigment2.models.Class;
 import edu.birzeit.mobileassigment2.models.Student;
 
+import static edu.birzeit.mobileassigment2.HttpConnection.DownloadText;
+import static edu.birzeit.mobileassigment2.HttpConnection.OpenHttpConnection;
+
 public class StudentActivity extends AppCompatActivity {
     Student[] students;
     Class[] classes;
@@ -60,86 +63,9 @@ public class StudentActivity extends AppCompatActivity {
         });
 
     }
-    public void onClickbtn(View view) {
-
-//        EditText edtCat = findViewById(R.id.edtCat);
-
-
-        String url = "http://localhost/school-project/student.php";
-        if (ContextCompat.checkSelfPermission(this,
-                Manifest.permission.INTERNET)
-                != PackageManager.PERMISSION_GRANTED) {
-
-            ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.INTERNET},
-                    123);
-
-        } else{
-            GetStudentsTask runner = new GetStudentsTask();
-            runner.execute(url);
-        }
 
 
 
-    }
-    private InputStream OpenHttpConnection(String urlString) throws IOException
-    {
-        InputStream in = null;
-        int response = -1;
-
-        URL url = new URL(urlString);
-        URLConnection conn = url.openConnection();
-
-        if (!(conn instanceof HttpURLConnection))
-            throw new IOException("Not an HTTP connection");
-        try{
-            HttpURLConnection httpConn = (HttpURLConnection) conn;
-            httpConn.setAllowUserInteraction(false);
-            httpConn.setInstanceFollowRedirects(true);
-            httpConn.setRequestMethod("GET");
-            httpConn.connect();
-            response = httpConn.getResponseCode();
-            if (response == HttpURLConnection.HTTP_OK) {
-                in = httpConn.getInputStream();
-            }
-        }
-        catch (Exception ex)
-        {
-            Log.d("Networking", ex.getLocalizedMessage());
-            throw new IOException("Error connecting");
-        }
-        return in;
-    }
-    private String DownloadText(String URL)
-    {
-        int BUFFER_SIZE = 2000;
-        InputStream in = null;
-        try {
-            in = OpenHttpConnection(URL);
-        } catch (IOException e) {
-            Log.d("Networking", e.getLocalizedMessage());
-            return "";
-        }
-
-        InputStreamReader isr = new InputStreamReader(in);
-        int charRead;
-        String str = "";
-        char[] inputBuffer = new char[BUFFER_SIZE];
-        try {
-            while ((charRead = isr.read(inputBuffer))>0) {
-                //---convert the chars to a String---
-                String readString =
-                        String.copyValueOf(inputBuffer, 0, charRead);
-                str += readString;
-                inputBuffer = new char[BUFFER_SIZE];
-            }
-            in.close();
-        } catch (IOException e) {
-            Log.d("Networking", e.getLocalizedMessage());
-            return "";
-        }
-        return str;
-    }
 
     public void goToAddStudent() {
         Intent intent = new Intent(this, AddStudentActivity.class);
@@ -169,12 +95,14 @@ public class StudentActivity extends AppCompatActivity {
                 public void onItemClick(AdapterView<?> parent, View view,
                                         int position, long id) {
                     Intent intent = new Intent(getApplicationContext(), EditStudentActivity.class);
+                    intent.putExtra("studentId", students[position].getSTUDENT_ID());
                     startActivity(intent);
                 }
             });
         }
     }
-    private class GetClassesTask extends AsyncTask<String, Void, String> {
+
+    public  class GetClassesTask extends AsyncTask<String, Void, String> {
         @Override
         protected String doInBackground(String... urls) {
             return DownloadText(urls[0]);
@@ -188,8 +116,6 @@ public class StudentActivity extends AppCompatActivity {
 
                 GetStudentsTask runner = new GetStudentsTask();
                 runner.execute(url);
-
-
         }
     }
 }
