@@ -3,137 +3,137 @@ package edu.birzeit.mobileassigment2.models;
 import java.util.Date;
 
 public class Student {
-    private int studentId;
-    private String firstName;
-    private String middleName;
-    private String lastName;
-    private Date dateOfBirth;
-    private String gender;
-    private String phone;
-    private String email;
-    private int nationalId;
-    private int classId;
-    private String address;
+    private int STUDENT_ID;
+    private String FIRST_NAME;
+    private String MIDDLE_NAME;
+    private String LAST_NAME;
+    private Date DOB;
+    private String GENDER;
+    private String PHONE;
+    private String EMAIL;
+    private int NATIONAL_ID;
+    private int CLASS_ID;
+    private String ADDRESS;
 
     public Student() {
     }
 
-    public Student(int studentId, String firstName, String middleName, String lastName, Date dateOfBirth, String gender, String phone, String email, int nationalId, int classId, String address) {
-        this.studentId = studentId;
-        this.firstName = firstName;
-        this.middleName = middleName;
-        this.lastName = lastName;
-        this.dateOfBirth = dateOfBirth;
-        this.gender = gender;
-        this.phone = phone;
-        this.email = email;
-        this.nationalId = nationalId;
-        this.classId = classId;
-        this.address = address;
+    public Student(int STUDENT_ID, String FIRST_NAME, String MIDDLE_NAME, String LAST_NAME, Date dateOfBirth, String GENDER, String PHONE, String EMAIL, int NATIONAL_ID, int CLASS_ID, String ADDRESS) {
+        this.STUDENT_ID = STUDENT_ID;
+        this.FIRST_NAME = FIRST_NAME;
+        this.MIDDLE_NAME = MIDDLE_NAME;
+        this.LAST_NAME = LAST_NAME;
+        this.DOB = dateOfBirth;
+        this.GENDER = GENDER;
+        this.PHONE = PHONE;
+        this.EMAIL = EMAIL;
+        this.NATIONAL_ID = NATIONAL_ID;
+        this.CLASS_ID = CLASS_ID;
+        this.ADDRESS = ADDRESS;
     }
 
-    public int getStudentId() {
-        return studentId;
+    public int getSTUDENT_ID() {
+        return STUDENT_ID;
     }
 
-    public void setStudentId(int studentId) {
-        this.studentId = studentId;
+    public void setSTUDENT_ID(int STUDENT_ID) {
+        this.STUDENT_ID = STUDENT_ID;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getFIRST_NAME() {
+        return FIRST_NAME;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFIRST_NAME(String FIRST_NAME) {
+        this.FIRST_NAME = FIRST_NAME;
     }
 
-    public String getMiddleName() {
-        return middleName;
+    public String getMIDDLE_NAME() {
+        return MIDDLE_NAME;
     }
 
-    public void setMiddleName(String middleName) {
-        this.middleName = middleName;
+    public void setMIDDLE_NAME(String MIDDLE_NAME) {
+        this.MIDDLE_NAME = MIDDLE_NAME;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getLAST_NAME() {
+        return LAST_NAME;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLAST_NAME(String LAST_NAME) {
+        this.LAST_NAME = LAST_NAME;
     }
 
     public Date getDateOfBirth() {
-        return dateOfBirth;
+        return DOB;
     }
 
     public void setDateOfBirth(Date dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
+        this.DOB = dateOfBirth;
     }
 
-    public String getGender() {
-        return gender;
+    public String getGENDER() {
+        return GENDER;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
+    public void setGENDER(String GENDER) {
+        this.GENDER = GENDER;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getPHONE() {
+        return PHONE;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setPHONE(String PHONE) {
+        this.PHONE = PHONE;
     }
 
-    public String getEmail() {
-        return email;
+    public String getEMAIL() {
+        return EMAIL;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setEMAIL(String EMAIL) {
+        this.EMAIL = EMAIL;
     }
 
-    public int getNationalId() {
-        return nationalId;
+    public int getNATIONAL_ID() {
+        return NATIONAL_ID;
     }
 
-    public void setNationalId(int nationalId) {
-        this.nationalId = nationalId;
+    public void setNATIONAL_ID(int NATIONAL_ID) {
+        this.NATIONAL_ID = NATIONAL_ID;
     }
 
-    public int getClassId() {
-        return classId;
+    public int getCLASS_ID() {
+        return CLASS_ID;
     }
 
-    public void setClassId(int classId) {
-        this.classId = classId;
+    public void setCLASS_ID(int CLASS_ID) {
+        this.CLASS_ID = CLASS_ID;
     }
 
-    public String getAddress() {
-        return address;
+    public String getADDRESS() {
+        return ADDRESS;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setADDRESS(String ADDRESS) {
+        this.ADDRESS = ADDRESS;
     }
 
     @Override
     public String toString() {
         return "Student{" +
-                "studentId=" + studentId +
-                ", firstName='" + firstName + '\'' +
-                ", middleName='" + middleName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", dateOfBirth=" + dateOfBirth +
-                ", gender='" + gender + '\'' +
-                ", phone='" + phone + '\'' +
-                ", email='" + email + '\'' +
-                ", nationalId=" + nationalId +
-                ", classId=" + classId +
-                ", address='" + address + '\'' +
+                "studentId=" + STUDENT_ID +
+                ", firstName='" + FIRST_NAME + '\'' +
+                ", middleName='" + MIDDLE_NAME + '\'' +
+                ", lastName='" + LAST_NAME + '\'' +
+                ", dateOfBirth=" + DOB +
+                ", gender='" + GENDER + '\'' +
+                ", phone='" + PHONE + '\'' +
+                ", email='" + EMAIL + '\'' +
+                ", nationalId=" + NATIONAL_ID +
+                ", classId=" + CLASS_ID +
+                ", address='" + ADDRESS + '\'' +
                 '}';
     }
 }

@@ -1,73 +1,71 @@
 package edu.birzeit.mobileassigment2.models;
 
-import java.util.Date;
-
 public class Class {
-    private int classId;
-    private String name;
-    private int sectionNumber;
-    private int roomNumber;
-    private int capacity;
+    private int CLASS_ID;
+    private String NAME;
+    private int SECTION_NUMBER;
+    private int ROOM_NUMBER;
+    private int CAPACITY;
 
     public Class() {
     }
 
-    public Class(int classId, String name, int sectionNumber, int roomNumber, int capacity) {
-        this.classId = classId;
-        this.name = name;
-        this.sectionNumber = sectionNumber;
-        this.roomNumber = roomNumber;
-        this.capacity = capacity;
+    public Class(int CLASS_ID, String NAME, int SECTION_NUMBER, int ROOM_NUMBER, int CAPACITY) {
+        this.CLASS_ID = CLASS_ID;
+        this.NAME = NAME;
+        this.SECTION_NUMBER = SECTION_NUMBER;
+        this.ROOM_NUMBER = ROOM_NUMBER;
+        this.CAPACITY = CAPACITY;
     }
 
-    public int getClassId() {
-        return classId;
+    public int getCLASS_ID() {
+        return CLASS_ID;
     }
 
-    public void setClassId(int classId) {
-        this.classId = classId;
+    public void setCLASS_ID(int CLASS_ID) {
+        this.CLASS_ID = CLASS_ID;
     }
 
-    public String getName() {
-        return name;
+    public String getNAME() {
+        return NAME;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNAME(String NAME) {
+        this.NAME = NAME;
     }
 
-    public int getSectionNumber() {
-        return sectionNumber;
+    public int getSECTION_NUMBER() {
+        return SECTION_NUMBER;
     }
 
-    public void setSectionNumber(int sectionNumber) {
-        this.sectionNumber = sectionNumber;
+    public void setSECTION_NUMBER(int SECTION_NUMBER) {
+        this.SECTION_NUMBER = SECTION_NUMBER;
     }
 
-    public int getRoomNumber() {
-        return roomNumber;
+    public int getROOM_NUMBER() {
+        return ROOM_NUMBER;
     }
 
-    public void setRoomNumber(int roomNumber) {
-        this.roomNumber = roomNumber;
+    public void setROOM_NUMBER(int ROOM_NUMBER) {
+        this.ROOM_NUMBER = ROOM_NUMBER;
     }
 
-    public int getCapacity() {
-        return capacity;
+    public int getCAPACITY() {
+        return CAPACITY;
     }
 
-    public void setCapacity(int capacity) {
-        this.capacity = capacity;
+    public void setCAPACITY(int CAPACITY) {
+        this.CAPACITY = CAPACITY;
     }
 
     @Override
     public String toString() {
         return "Class{" +
-                "classId=" + classId +
-                ", name='" + name + '\'' +
-                ", sectionNumber=" + sectionNumber +
-                ", roomNumber=" + roomNumber +
-                ", capacity=" + capacity +
+                "classId=" + CLASS_ID +
+                ", name='" + NAME + '\'' +
+                ", sectionNumber=" + SECTION_NUMBER +
+                ", roomNumber=" + ROOM_NUMBER +
+                ", capacity=" + CAPACITY +
                 '}';
     }
 }
