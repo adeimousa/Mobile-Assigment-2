@@ -119,15 +119,16 @@
 
     <Button
         android:id="@+id/button2Teacher"
-        android:layout_width="wrap_content"
-        android:layout_height="180dp"
-        android:layout_below="@+id/datePickerTeacher"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="53dp"
-        android:layout_toEndOf="@+id/editTextNationalNumberTeacher"
-        android:layout_toRightOf="@+id/editTextNationalNumberTeacher"
+        android:layout_width="208dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/classSpinnerTeacher"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="133dp"
+        android:layout_marginLeft="133dp"
+        android:layout_marginTop="67dp"
         android:onClick="addTeacher"
-        android:text="Add" />
+        android:text="Add"
+        app:backgroundTint="@color/student_blue1" />
 
 </RelativeLayout>
