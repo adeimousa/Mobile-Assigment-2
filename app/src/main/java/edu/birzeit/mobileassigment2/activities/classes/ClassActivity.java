@@ -1,4 +1,4 @@
-package edu.birzeit.mobileassigment2.activities.student;
+package edu.birzeit.mobileassigment2.activities.classes;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -15,24 +15,27 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.gson.Gson;
 
 import edu.birzeit.mobileassigment2.R;
+import edu.birzeit.mobileassigment2.activities.student.AddStudentActivity;
+import edu.birzeit.mobileassigment2.activities.student.EditStudentActivity;
+import edu.birzeit.mobileassigment2.activities.student.StudentActivity;
+import edu.birzeit.mobileassigment2.adapters.ClassAdapter;
 import edu.birzeit.mobileassigment2.adapters.StudentAdapter;
 import edu.birzeit.mobileassigment2.models.Class;
-import edu.birzeit.mobileassigment2.models.Student;
 
 import static edu.birzeit.mobileassigment2.HttpConnection.DownloadText;
 
-public class StudentActivity extends AppCompatActivity {
-    Student[] students;
+public class ClassActivity extends AppCompatActivity {
     Class[] classes;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_student);
+        setContentView(R.layout.activity_class);
         String url = "http://10.0.2.2:80/school-project/class.php";
         if (ContextCompat.checkSelfPermission(this,
                 Manifest.permission.INTERNET)
@@ -46,23 +49,23 @@ public class StudentActivity extends AppCompatActivity {
             GetClassesTask runner = new GetClassesTask();
             runner.execute(url);
         }
-        FloatingActionButton addButton = (FloatingActionButton) findViewById(R.id.addStudentBtn);
+        FloatingActionButton addButton = (FloatingActionButton) findViewById(R.id.addClassBtn);
         addButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                goToAddStudent();
+                goToAddClass();
             }
         });
 
-        EditText serachField = findViewById(R.id.editTextSearchStudent);
+        EditText serachField = findViewById(R.id.editTextSearchClass);
         serachField.addTextChangedListener(new TextWatcher() {
 
             @Override
             public void onTextChanged(CharSequence cs, int arg1, int arg2, int arg3) {
 //                adapter.getFilter().filter(cs);
                 System.out.println(cs);
-                String url = "http://10.0.2.2:80/school-project/student.php?nameFilter="+cs;
+                String url = "http://10.0.2.2:80/school-project/class.php?nameFilter="+cs;
 
-                GetStudentsTask runner = new GetStudentsTask();
+                GetClassesTask runner = new GetClassesTask();
                 runner.execute(url);
             }
 
@@ -76,46 +79,12 @@ public class StudentActivity extends AppCompatActivity {
 //                Toast.makeText(getApplicationContext(),"after text change",Toast.LENGTH_LONG).show();
             }
         });
-
     }
-
-
-
-
-    public void goToAddStudent() {
-        Intent intent = new Intent(this, AddStudentActivity.class);
-        startActivity(intent);
-    }
-    public  void  goToEditStudent() {
-        Intent intent = new Intent(this, EditStudentActivity.class);
+    public void goToAddClass() {
+        Intent intent = new Intent(this, AddClassActivity.class);
         startActivity(intent);
     }
 
-
-    private class GetStudentsTask extends AsyncTask<String, Void, String> {
-        @Override
-        protected String doInBackground(String... urls) {
-            return DownloadText(urls[0]);
-        }
-        @Override
-        protected void onPostExecute(String result) {
-            Gson gson = new Gson();
-            students = gson.fromJson(result, Student[].class);
-            ListView simpleList;
-            simpleList = (ListView) findViewById(R.id.studentsList);
-            StudentAdapter studentAdapter = new StudentAdapter(getApplicationContext(), students, classes);
-            simpleList.setAdapter(studentAdapter);
-            simpleList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                @Override
-                public void onItemClick(AdapterView<?> parent, View view,
-                                        int position, long id) {
-                    Intent intent = new Intent(getApplicationContext(), EditStudentActivity.class);
-                    intent.putExtra("studentId", students[position].getSTUDENT_ID());
-                    startActivity(intent);
-                }
-            });
-        }
-    }
 
     public  class GetClassesTask extends AsyncTask<String, Void, String> {
         @Override
@@ -127,10 +96,19 @@ public class StudentActivity extends AppCompatActivity {
             System.out.println(result);
             Gson gson = new Gson();
             classes = gson.fromJson(result, Class[].class);
-            String url = "http://10.0.2.2:80/school-project/student.php";
-
-                GetStudentsTask runner = new GetStudentsTask();
-                runner.execute(url);
+            ListView classList;
+            classList = (ListView) findViewById(R.id.classesList);
+            ClassAdapter classAdapter = new ClassAdapter(getApplicationContext(), classes);
+            classList.setAdapter(classAdapter);
+            classList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view,
+                                        int position, long id) {
+                    Intent intent = new Intent(getApplicationContext(), EditClassActivity.class);
+                    intent.putExtra("classId", classes[position].getCLASS_ID());
+                    startActivity(intent);
+                }
+            });
         }
     }
 }

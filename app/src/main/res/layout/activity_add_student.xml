@@ -6,20 +6,40 @@
     android:layout_height="match_parent"
     tools:context=".activities.student.AddStudentActivity">
 
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="279dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="66dp"
+        android:layout_marginLeft="66dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="66dp"
+        android:layout_marginRight="66dp"
+        android:gravity="center"
+        android:text="Add Student"
+        android:textColor="@color/student_blue1"
+        android:textSize="30sp" />
 
     <EditText
         android:id="@+id/editTextFirstName"
         android:layout_width="147dp"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/textView5"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="18dp"
-        android:layout_marginLeft="18dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="14dp"
         android:ems="10"
         android:hint="First Name"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        app:backgroundTint="@color/student_blue1"
+        />
 
     <EditText
         android:id="@+id/editTextMiddleName"
@@ -28,26 +48,14 @@
         android:layout_below="@+id/editTextFirstName"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_marginStart="133dp"
-        android:layout_marginLeft="133dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="143dp"
+        android:layout_marginLeft="143dp"
+        android:layout_marginTop="6dp"
         android:ems="10"
         android:hint="Middle Name"
-        android:inputType="textPersonName" />
-
-    <EditText
-        android:id="@+id/editTextLastName"
-        android:layout_width="140dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="80dp"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="20dp"
-        android:layout_toEndOf="@+id/editTextFirstName"
-        android:layout_toRightOf="@+id/editTextFirstName"
-        android:ems="10"
-        android:hint="Last Name"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        app:backgroundTint="@color/student_blue1"
+        />
 
     <RadioGroup
         android:layout_width="207dp"
@@ -70,7 +78,8 @@
             android:layout_marginTop="18dp"
             android:layout_toEndOf="@+id/textView"
             android:layout_toRightOf="@+id/textView"
-            android:text="Male" />
+            android:text="Male"
+            app:buttonTint="@color/student_blue1" />
 
         <RadioButton
             android:id="@+id/radioButtonFemale"
@@ -82,7 +91,8 @@
             android:layout_marginTop="18dp"
             android:layout_toEndOf="@+id/radioButtonMale"
             android:layout_toRightOf="@+id/radioButtonMale"
-            android:text="Female" />
+            android:text="Female"
+            app:buttonTint="@color/student_blue1" />
 
     </RadioGroup>
 
@@ -93,9 +103,9 @@
         android:layout_below="@+id/editTextMiddleName"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_marginStart="11dp"
-        android:layout_marginLeft="11dp"
-        android:layout_marginTop="26dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="31dp"
         android:gravity="center"
         android:text="Gender" />
 
@@ -107,20 +117,22 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginRight="12dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
         android:calendarViewShown="false"
         android:datePickerMode="spinner"
         android:spinnersShown="true" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="98dp"
-        android:layout_height="50dp"
+        android:layout_width="93dp"
+        android:layout_height="56dp"
         android:layout_below="@+id/textView"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
         android:layout_marginTop="56dp"
-        android:layout_marginEnd="37dp"
-        android:layout_marginRight="37dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
         android:layout_toStartOf="@+id/datePicker"
         android:layout_toLeftOf="@+id/datePicker"
         android:gravity="center"
@@ -133,12 +145,14 @@
         android:layout_below="@+id/datePicker"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_marginStart="39dp"
-        android:layout_marginLeft="39dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
         android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="Phone"
-        android:inputType="phone" />
+        android:inputType="phone"
+        app:backgroundTint="@color/student_blue1"
+        />
 
     <EditText
         android:id="@+id/editTextNationalNumber"
@@ -147,12 +161,14 @@
         android:layout_below="@+id/editTextEmailAddress"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_marginStart="39dp"
-        android:layout_marginLeft="39dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
         android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="National Id"
-        android:inputType="number" />
+        android:inputType="number"
+        app:backgroundTint="@color/student_blue1"
+        />
 
     <EditText
         android:id="@+id/editTextEmailAddress"
@@ -161,12 +177,14 @@
         android:layout_below="@+id/editTextPhone"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_marginStart="39dp"
-        android:layout_marginLeft="39dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
         android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="Email Address"
-        android:inputType="textEmailAddress" />
+        android:inputType="textEmailAddress"
+        app:backgroundTint="@color/student_blue1"
+        />
 
     <EditText
         android:id="@+id/editTextAddress"
@@ -175,35 +193,58 @@
         android:layout_below="@+id/editTextNationalNumber"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_marginStart="39dp"
-        android:layout_marginLeft="39dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
         android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="Address"
-        android:inputType="textPostalAddress" />
+        android:inputType="textPostalAddress"
+        app:backgroundTint="@color/student_blue1"
+        />
 
     <Spinner
         android:id="@+id/classSpinner"
-        android:layout_width="215dp"
-        android:layout_height="40dp"
+        android:layout_width="206dp"
+        android:layout_height="50dp"
         android:layout_below="@+id/editTextAddress"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_marginStart="39dp"
-        android:layout_marginLeft="39dp"
-        android:layout_marginTop="10dp" />
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="9dp"
+        app:backgroundTint="@color/student_blue1"
+        />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="180dp"
+        android:layout_width="104dp"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/datePicker"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="53dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="219dp"
         android:layout_toEndOf="@+id/editTextNationalNumber"
         android:layout_toRightOf="@+id/editTextNationalNumber"
         android:onClick="addStudent"
-        android:text="Add" />
+        android:text="Add"
+        app:backgroundTint="@color/student_blue1" />
+
+    <EditText
+        android:id="@+id/editTextLastName"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView5"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_toEndOf="@+id/editTextFirstName"
+        android:layout_toRightOf="@+id/editTextFirstName"
+        android:ems="10"
+        android:hint="Last Name"
+        android:inputType="textPersonName"
+        app:backgroundTint="@color/student_blue1"
+        />
 
 </RelativeLayout>
