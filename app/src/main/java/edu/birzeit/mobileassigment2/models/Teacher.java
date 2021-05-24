@@ -3,104 +3,104 @@ package edu.birzeit.mobileassigment2.models;
 import java.util.Date;
 
 public class Teacher {
-    private int teacherId;
-    private String fullName;
-    private Date dateOfBirth;
-    private String phone;
-    private String email;
-    private int nationalId;
-    private int fieldId;
-    private String address;
+    private int TEACHER_ID ;
+    private String FULL_NAME;
+    private Date DOB;
+    private String PHONE;
+    private String EMAIL;
+    private int NATIONAL_ID;
+    private int FIELD_ID ;
+    private String ADDRESS;
 
     public Teacher() {
     }
 
-    public Teacher(int teacherId, String fullName, Date dateOfBirth, String phone, String email, int nationalId, int fieldId, String address) {
-        this.teacherId = teacherId;
-        this.fullName = fullName;
-        this.dateOfBirth = dateOfBirth;
-        this.phone = phone;
-        this.email = email;
-        this.nationalId = nationalId;
-        this.fieldId = fieldId;
-        this.address = address;
+    public Teacher(int TEACHER_ID, String FULL_NAME, Date DOB, String PHONE, String EMAIL, int NATIONAL_ID, int FIELD_ID, String ADDRESS) {
+        this.TEACHER_ID = TEACHER_ID;
+        this.FULL_NAME = FULL_NAME;
+        this.DOB = DOB;
+        this.PHONE = PHONE;
+        this.EMAIL = EMAIL;
+        this.NATIONAL_ID = NATIONAL_ID;
+        this.FIELD_ID = FIELD_ID;
+        this.ADDRESS = ADDRESS;
     }
 
-    public int getTeacherId() {
-        return teacherId;
+    public int getTEACHER_ID() {
+        return TEACHER_ID;
     }
 
-    public void setTeacherId(int teacherId) {
-        this.teacherId = teacherId;
+    public void setTEACHER_ID(int TEACHER_ID) {
+        this.TEACHER_ID = TEACHER_ID;
     }
 
-    public String getFullName() {
-        return fullName;
+    public String getFULL_NAME() {
+        return FULL_NAME;
     }
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
+    public void setFULL_NAME(String FULL_NAME) {
+        this.FULL_NAME = FULL_NAME;
     }
 
-    public Date getDateOfBirth() {
-        return dateOfBirth;
+    public Date getDOB() {
+        return DOB;
     }
 
-    public void setDateOfBirth(Date dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
+    public void setDOB(Date DOB) {
+        this.DOB = DOB;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getPHONE() {
+        return PHONE;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setPHONE(String PHONE) {
+        this.PHONE = PHONE;
     }
 
-    public String getEmail() {
-        return email;
+    public String getEMAIL() {
+        return EMAIL;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setEMAIL(String EMAIL) {
+        this.EMAIL = EMAIL;
     }
 
-    public int getNationalId() {
-        return nationalId;
+    public int getNATIONAL_ID() {
+        return NATIONAL_ID;
     }
 
-    public void setNationalId(int nationalId) {
-        this.nationalId = nationalId;
+    public void setNATIONAL_ID(int NATIONAL_ID) {
+        this.NATIONAL_ID = NATIONAL_ID;
     }
 
-    public int getFieldId() {
-        return fieldId;
+    public int getFIELD_ID() {
+        return FIELD_ID;
     }
 
-    public void setFieldId(int fieldId) {
-        this.fieldId = fieldId;
+    public void setFIELD_ID(int FIELD_ID) {
+        this.FIELD_ID = FIELD_ID;
     }
 
-    public String getAddress() {
-        return address;
+    public String getADDRESS() {
+        return ADDRESS;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setADDRESS(String ADDRESS) {
+        this.ADDRESS = ADDRESS;
     }
 
     @Override
     public String toString() {
         return "Teacher{" +
-                "teacherId=" + teacherId +
-                ", fullName='" + fullName + '\'' +
-                ", dateOfBirth=" + dateOfBirth +
-                ", phone='" + phone + '\'' +
-                ", email='" + email + '\'' +
-                ", nationalId=" + nationalId +
-                ", fieldId=" + fieldId +
-                ", address='" + address + '\'' +
+                "TEACHER_ID=" + TEACHER_ID +
+                ", FULL_NAME='" + FULL_NAME + '\'' +
+                ", DOB=" + DOB +
+                ", PHONE='" + PHONE + '\'' +
+                ", EMAIL='" + EMAIL + '\'' +
+                ", NATIONAL_ID=" + NATIONAL_ID +
+                ", FIELD_ID=" + FIELD_ID +
+                ", ADDRESS='" + ADDRESS + '\'' +
                 '}';
     }
 }

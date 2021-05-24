@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.teacher.EditTeacherActivity">
+
+    <EditText
+        android:id="@+id/editTextFullNameTeacherEdt"
+        android:layout_width="147dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Full Name"
+        android:inputType="textPersonName" />
+
+    <DatePicker
+        android:id="@+id/datePickerTeacherEdt"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:layout_below="@+id/editTextFullNameTeacherEdt"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:spinnersShown="true" />
+
+    <TextView
+        android:id="@+id/textView2TeacherEdt"
+        android:layout_width="98dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/editTextFullNameTeacherEdt"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginRight="37dp"
+        android:layout_toStartOf="@+id/datePicker"
+        android:layout_toLeftOf="@+id/datePicker"
+        android:gravity="center"
+        android:text="Date Of Birth" />
+
+    <EditText
+        android:id="@+id/editTextPhoneTeacherEdt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/datePickerTeacherEdt"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="39dp"
+        android:layout_marginLeft="39dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Phone"
+        android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/editTextNationalNumberTeacherEdt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextEmailAddressTeacherEdt"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="39dp"
+        android:layout_marginLeft="39dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="National Id"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/editTextEmailAddressTeacherEdt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextPhoneTeacherEdt"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="39dp"
+        android:layout_marginLeft="39dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Email Address"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/editTextAddressTeacherEdt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextNationalNumberTeacherEdt"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="39dp"
+        android:layout_marginLeft="39dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Address"
+        android:inputType="textPostalAddress" />
+
+    <Spinner
+        android:id="@+id/classSpinnerTeacherEdt"
+        android:layout_width="215dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/editTextAddressTeacherEdt"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="39dp"
+        android:layout_marginLeft="39dp"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:id="@+id/buttonTeacherEdt"
+        android:layout_width="103dp"
+        android:layout_height="186dp"
+        android:layout_below="@+id/datePickerTeacherEdt"
+        android:layout_marginStart="34dp"
+        android:layout_marginLeft="34dp"
+        android:layout_marginTop="55dp"
+        android:layout_toEndOf="@+id/editTextNationalNumberTeacherEdt"
+        android:layout_toRightOf="@+id/editTextNationalNumberTeacherEdt"
+        android:onClick="editTeacher"
+        android:text="Save"
+        android:textSize="18sp"
+        app:backgroundTint="@color/student_blue1" />
+
+</RelativeLayout>

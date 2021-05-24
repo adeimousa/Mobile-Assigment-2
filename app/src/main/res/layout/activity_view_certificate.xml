@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.certificate.ViewCertificateActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/linearLayoutHorizontal_style_1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView10"
+                    style="@style/txt_style_4"
+                    android:layout_width="10dp"
+                    android:text="@string/txt_teacherName" />
+
+                <TextView
+                    android:id="@+id/txt_teacherName"
+                    style="@style/text_style_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="TextView" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linearLayoutHorizontal_style_1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView12"
+                    style="@style/txt_style_4"
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/txt_organization" />
+
+                <TextView
+                    android:id="@+id/txt_organizationName"
+                    style="@style/text_style_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="TextView" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/txt_LinerLayout_line"></LinearLayout>
+
+            <LinearLayout
+                style="@style/linearLayoutHorizontal_style_1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_certificateType"
+                    style="@style/text_style_2"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    style="@style/txt_style_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/txt_in" />
+
+                <TextView
+                    android:id="@+id/txt_certificateField"
+                    style="@style/text_style_2"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="TextView" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linearLayoutHorizontal_style_1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_fromDate"
+                    style="@style/text_style_2"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    style="@style/txt_style_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/txt_to" />
+
+                <TextView
+                    android:id="@+id/txt_toDate"
+                    style="@style/text_style_2"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="TextView" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/txt_LinerLayout_line"></LinearLayout>
+
+            <TextView
+                android:id="@+id/textView15"
+                style="@style/txt_style_4"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="0"
+                android:text="@string/txt_description" />
+
+            <EditText
+                android:id="@+id/edtTxtMultiLine_description"
+                android:layout_width="match_parent"
+                android:layout_height="241dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:text="tes test testsetsetsetsetse st setset test"
+                android:textColor="@color/blue_ex" />
+
+            <LinearLayout style="@style/txt_LinerLayout_line"></LinearLayout>
+
+            <LinearLayout
+                style="@style/linearLayoutHorizontal_style_1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button"
+                    style="@style/btn_style_1"
+                    android:layout_width="185dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0"
+                    android:onClick="btn_back_onClick"
+                    android:text="@string/btn_back"
+                    app:backgroundTint="@color/blue_ex"
+                    app:cornerRadius="10dp" />
+
+                <Button
+                    android:id="@+id/button2"
+                    style="@style/btn_style_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:onClick="btn_edit_onClick"
+                    android:text="@string/btn_edit"
+                    app:backgroundTint="@color/blue_ex"
+                    app:cornerRadius="10dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        style="@style/header_layout_style_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.001">
+
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/text_style_1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/certificate_txt"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/txt_certificateId"
+            style="@style/text_style_1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:shadowColor="@color/black"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="10"
+            android:text="@string/certificateId_txt"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
